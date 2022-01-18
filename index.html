@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>블리자드 리뉴얼</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="img/favicon.ico/favicon-16x16.png" type="image/icon">
+    <!-- awesome icon cdn -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- 부트스트랩 cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- swiper css cdn -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!-- 외부 css -->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <!-- 미디어쿼리 외부 css -->
+    <link rel="stylesheet" href="css/media_main.css" type="text/css">
+    <!-- 제이쿼리 라이브러리 연결 -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <!-- 부트스트랩 js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!-- swiper js cdn -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- 외부 js -->
+    <script src="js/main.js"></script>
+    <!-- 지도 -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwlNqAEil52XRPHmSVb4Luk18qQG9GqcM&sensor=false&language=ko"></script> 
+    <script> 
+        function initialize() { 
+      var myLatlng = new google.maps.LatLng(37.50967465672413, 127.06126809262553); // 좌표값
+        var mapOptions = { 
+            zoom: 14, // 지도 확대레벨 조정
+            center: myLatlng, 
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        } 
+        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions); 
+        var marker = new google.maps.Marker({ 
+        position: myLatlng, 
+        map: map, 
+        title: "블리자드" // 마커에 마우스를 올렸을때 간략하게 표기될 설명글
+        }); 
+        } 
+        window.onload = initialize;
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+        <div class="header_wrap">
+            <div class="logo">
+                <a href="index.html"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Shop</a>
+                    </li>
+                    <li>
+                        <a href="#">Game</a>
+                        <ul class="sub">
+                            <li><a href="#">디아블로® II: 레저렉션</a></li>
+                            <li><a href="#">오버워치2</a></li>
+                            <li><a href="#">오버워치</a></li>
+                            <li><a href="#">월드 오브 워크래프트®</a></li>
+                            <li><a href="#">하스스톤®</a></li>
+                            <li><a href="#">히어로즈 오브 더 스톰®</a></li>
+                            <li><a href="#">워크래프트® III:리포지드</a></li>
+                            <li><a href="#">디아블로® IV</a></li>
+                            <li><a href="#">디아블로® 이모탈</a></li>
+                            <li><a href="#">디아블로®III</a></li>
+                            <li><a href="#">스타크래프트®II</a></li>
+                            <li><a href="#">스타크래프트®리마스터</a></li>
+                            <li><a href="#">블리자드®아케이드 컬렉션</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">News</a>
+                    </li>
+                    <li>
+                        <a href="#">E-Sports</a>
+                        <ul class="sub">
+                            <li><a href="#">오버워치 리그</a></li>
+                            <li><a href="#">오버워치 월드컵</a></li>
+                            <li><a href="#">하스스톤 마스터즈</a></li>
+                            <li><a href="#">스타크래프트 WCS</a></li>
+                            <li><a href="#">월드 오브 워크래프트 아레나<br>월드 챔피언십</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Event</a></li>
+                </ul>
+            </nav>
+            <div class="menu">
+                <a href="#"></a>
+            </div>
+            <div class="sub_bg"></div>
+        </div>
+        </header>
+        <section class="s1">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide main1">
+                        <div class="main_txt">
+                            <h1>1월 4일까지 최대 64% 할인</h1>
+                            <a href="#">지금 구매하기</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide main2">
+                        <div class="main_txt">
+                            <h1>마스터리 서버가 출시되었습니다!</h1>
+                            <a href="#">자세히 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide main3">
+                        <div class="main_txt">
+                            <h1>오버워치에 오신 것을 환영합니다.</h1>
+                            <p>오버워는 다수의 강력한 영웅을 플레이할 수 있는 다채로운 팀전 액션 게임입니다.<br>세계를 여행하며 팀을 구성해, 짜릿한 6대 6 전투를 펼치십시오. </p>
+                            <a href="#">자세히 알아보기</a>  
+                        </div>
+                    </div>
+                    <div class="swiper-slide main4">
+                        <div class="main_txt">
+                            <h1>진영을 선택하고 명예를 위해 싸우세요!</h1>
+                            <p>한 번 시작하면 멈출 수 없는 전략 카드 게임 하스스톤에 오신 것을 환영합니다!</p>
+                            <a href="#">자세히 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-play-stop"></div>
+            </div>
+        </section>
+        <section class="s2">
+            <div class="center">
+                <div class="row">
+                    <div class="col-lg-6 company_txt">
+                        <h1>Welcome to BLIZZARD</h1>
+                        <p>블리자드에 오신 것을 환영합니다.<br>
+                            블리자드 엔터테인먼트는 열과 성의를 다해 창작 작업을 진행합니다.
+                            우리는 매일 추구하는 핵심 가치를 되새기며 모든 플레이어를 위해
+                            멋진 엔터테인먼트 경험을 선사하고자 노력합니다.
+                            현재 활발히 활동 중인 커뮤니티의 일원이라면,
+                            전 세계 블리자드 지사에서 가족이 되어 함께 일하거나
+                            블리자드의 일부를 우주 여행길에 데려가 주세요.
+                            어느 쪽이든 기꺼이 환영합니다.</p>
+                        <p><span> Welcome to Blizzard<br>
+                            Blizzard Entertainment works with passion and sincerity.
+                            Recalling our core values ​​on a daily basis, we strive for
+                            We strive to provide great entertainment experiences.
+                            If you are part of an active community,
+                            Work together as a family at Blizzard offices around the world, or
+                            Take some of Blizzard on a space journey.
+                            Either way is welcome.</span></p>
+                    </div>
+                    <div class="col-lg-6 company_img">
+                        <img src="img/intro.png" alt="회사소개">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s3">
+            <div class="center">
+                <h1 class="fade_animation"><span>BLIZZARD</span><br>GAMES</h1>
+                <div class="game up_animation">
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide p1">
+                                <div class="p_top">
+                                    <h3>Diablo II<br>
+                                        Resurrected</h3>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="p_bottom">
+                                    <div class="p_left">
+                                        <h3>디아블로 레저렉션</h3>
+                                        <p>48,000원</p>
+                                    </div>
+                                    <div class="p_right">
+                                        <h3>디아블로 대악마 컬렉션</h3>
+                                        <p>72,000원</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide p2">
+                                <div class="p_top">
+                                    <h3>Hearth Stone</h3>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="p_bottom">
+                                    <div class="p_left">
+                                        <h3>하스스톤 무료플레이</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide p3">
+                                <div class="p_top">
+                                    <h3>StarCraft II</h3>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="p_bottom">
+                                    <div class="p_left">
+                                        <h3>스타크래프트II 켐페인</h3>
+                                        <p>일반판 38,000원</p>
+                                    </div>
+                                    <div class="p_right">
+                                        <h3>스타크래프트II 켐페인</h3>
+                                        <p>디지털 디럭스 56,000원</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide p4">
+                                <div class="p_top">
+                                    <h3>World of WarCraft</h3>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="p_bottom">
+                                    <div class="p_left">
+                                        <h3>영웅 꾸러미</h3>
+                                        <p>69,000원</p>
+                                    </div>
+                                    <div class="p_right">
+                                        <h3>신화 꾸러미</h3>
+                                        <p>94,000원</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s4">
+            <div class="center container">
+                <h1 class="fade_animation"><span>Blizzard</span><br>News</h1>
+                <div class="row">
+                    <div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl-6 s4_left">
+                        <div class="s4_img s4_ani1">
+                            <img src="img/news2.png" alt="뉴스">
+                        </div>
+                        <div class="s4_des s4_ani2">
+                            <h1>Blizzard Entertainment</h1>
+                            <h3>긴급 수정 사항 :2022년 1월 6일</h3>
+                            <h4>플레이어 간 전투</h4>
+                            <p>1. 도적<br>
+                                - 무법<br>
+                                난도질이 각자의 몫(플레이어 간 전투 특성)의 효과를<br>
+                                발동시키던 문제를 수정하였습니다.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl-6 s4_right">
+                        <div class="s4_img s4_ani3">
+                            <img src="img/news1.png" alt="뉴스">
+                        </div>
+                        <div class="s4_des s4_ani4">
+                            <h1>Blizzard Entertainment</h1>
+                            <h3>단 하룻밤만, 새해를 환하게!</h3>
+                            <h4>새해 축하 불꽃으로 환하게 타오릅니다.</h4>
+                            <p>전쟁 서버에서 플레이하고 있다면 무엇이<br>
+                                무법항을 뒤흔들고 있는지 확인해 보세요. <br>
+                                불꽃놀이 이상의 무언가가 기다리고 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s5">
+            <div class="center">
+                <h1 class="fade_animation">Blizzard<span><br>E-Sports</span></h1>
+                <div class="acc up_animation">
+                    <div class="acc_item acc1">
+                        <h1>OVERWATCH WORLD CUP</h1>
+                    </div>
+                    <div class="acc_item acc2">
+                        <h1>HearthStone</h1>
+                    </div>
+                    <div class="acc_item acc3 active">
+                        <h1>StarCraft II</h1>
+                    </div>
+                    <div class="acc_item acc4">
+                        <h1>World of WarCraft</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s6">
+            <div class="center">
+                <div class="insta">
+                    <ul>
+                        <li class="up_animation"><a href="#">
+                            <img src="img/insta.png" alt="인스타">
+                            <p>https://www.instagram.com<br>
+                                /blizzard/</p>
+                        </a></li>
+                        <li class="up_animation second"><a href="#">
+                            <img src="img/ins1.png" alt="인스타">
+                        </a></li>
+                        <li class="up_animation"><a href="#">
+                            <img src="img/ins2.png" alt="인스타">
+                        </a></li>
+                        <li class="up_animation"><a href="#">
+                            <img src="img/ins3.png" alt="인스타">
+                        </a></li>
+                        <li class="up_animation up_delay"><a href="#">
+                            <img src="img/ins4.png" alt="인스타">
+                        </a></li>
+                        <li class="up_animation up_delay"><a href="#">
+                            <img src="img/ins5.png" alt="인스타">
+                        </a></li>
+                        <li class="up_animation up_delay"><a href="#">
+                            <img src="img/ins6.png" alt="인스타">
+                        </a></li>
+                        <li class="up_animation up_delay last"><a href="#">
+                            <img src="img/ins7.png" alt="인스타">
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="s7">
+            <div id="map_canvas"></div>
+            <div class="s7_navi up_animation">
+                <div class="s7_img">
+                    <div class="s7_icon">
+                        <img src="img/navi.png" alt="지도아이콘">
+                        <p>Navigation</p>
+                    </div>
+                </div>
+                <div class="s7_info">
+                    <address>
+                        <h1>Blizzard Korea</h1>
+                        블리자드 엔터테인먼트 유한 회사<br>
+                        주소: 06164 서울시 강남구 테헤란로 521 파르나스타워 15층<br>
+                        521, Teheran-ro, Gangnam-gu, Seoul, 06164, Rep. of KOREA<br>
+                        <span>- 내비게이션 검색 시 : 테헤란로 521<br>
+                            - 주차 : 파르나스타워 지하주차장 </span>
+                    </address>
+                    <div class="s7_des tel_number">
+                        <div class="s7_left tel_icon">
+                            <img src="img/telephone.png" alt="전화">
+                        </div>
+                        <div class="s7_right number">
+                            <p> 대표 번호: 1644-0727 <br>
+                            팩스 번호: (02)544-3038 <br>
+                            이메일: websupport@blizzard.co.kr
+                            </p>
+                        </div>
+                    </div>
+                    <div class="s7_des company">
+                        <div class="s7_left com_icon">
+                            <img src="img/company.png" alt="회사">
+                        </div>
+                        <div class="s7_right com_info">
+                            <p>사업자 등록 번호: 211-87-49910 <br>
+                                통신 판매업 신고 번호: 강남-6017호 <br>
+                                사업자정보확인 <br>
+                                대표이사: 자렛 알렌 브랙, 전동진 <br>
+                                개인정보 보호책임자: 전동진 대표이사
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="center">
+                <div class="footer_logo">
+                    <a href="#"><img src="img/logo2.png" alt="로고"></a>
+                </div>
+                <div class="footer_txt">
+                    <p>인재 채용 | 회사 소개 | 고객지원 | 문의 등록 | 보도 자료| API | 사이트맵 | BATTLE.NET  PC방<br>
+                        개인정보 처리방침 | 법률 관련 문서 | 이용 약관 | 쿠키정보 처리방침 | 쿠키 설정</p>
+                    <p class="en">한 곳에서 모든 게임을 플레이할 수 있는 Battle.net 앱<br>
+                        ©2021 Blizzard Entertainment, Inc. 모든 권리는 Blizzard Entertainment에 있습니다. <br>
+                        여기서 언급된 다른 모든  상표는 각 소유권자들의 자산입니다.
+                    </p>
+                    <p class="cr">©2021 Blizzard Entertainment, Inc. All rights reserved. <br>
+                        All other trademarks mentioned herein are the property of their respective owners.</p>
+                </div>
+                <div class="footer_site">
+                    <div class="sns">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="img/insta_bottom.png" alt="인스타"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/youtube_bottom.png" alt="유튜브"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- top버튼 -->
+        <div class="top">TOP</div>
+    </div>
+    <!-- 사이트맵 -->
+    <div class="sitemap">
+        <div class="site_logo">
+            <img src="img/logo2.png" alt="사이트맵 로고">
+        </div>
+        <div class="site_close">
+            <a href="#"><img src="img/close_btn.png" alt="닫기"></a>
+        </div>
+        <nav class="site_nav">
+            <ul>
+                <li>
+                    <a href="#">Shop</a>
+                </li>
+                <li>
+                    <a href="#">Game</a>
+                    <ul class="sub">
+                        <li><a href="#">디아블로® II: 레저렉션</a></li>
+                        <li><a href="#">오버워치2</a></li>
+                        <li><a href="#">오버워치</a></li>
+                        <li><a href="#">월드 오브 워크래프트®</a></li>
+                        <li><a href="#">하스스톤®</a></li>
+                        <li><a href="#">히어로즈 오브 더 스톰®</a></li>
+                        <li><a href="#">워크래프트® III:리포지드</a></li>
+                        <li><a href="#">디아블로® IV</a></li>
+                        <li><a href="#">디아블로® 이모탈</a></li>
+                        <li><a href="#">디아블로®III</a></li>
+                        <li><a href="#">스타크래프트®II</a></li>
+                        <li><a href="#">스타크래프트®리마스터</a></li>
+                        <li><a href="#">블리자드®아케이드 컬렉션</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">News</a>
+                </li>
+                <li>
+                    <a href="#">E-Sports</a>
+                    <ul class="sub">
+                        <li><a href="#">오버워치 리그</a></li>
+                        <li><a href="#">오버워치 월드컵</a></li>
+                        <li><a href="#">하스스톤 마스터즈</a></li>
+                        <li><a href="#">스타크래프트 WCS</a></li>
+                        <li><a href="#">월드 오브 워크래프트 아레나<br>월드 챔피언십</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Event</a></li>
+            </ul>
+        </nav>
+        <div class="site_sns">
+            <ul>
+                <li><a href="#"><img src="img/insta_bottom.png" alt="인스타그램"></a></li>
+                <li><a href="#"><img src="img/youtube_bottom.png" alt="유튜브"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
